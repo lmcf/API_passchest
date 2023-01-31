@@ -1,0 +1,19 @@
+<config>
+    <version>1.0.0</version>
+    <appname>PASSCHEST</appname>
+
+    <!-- APLICATION CUSTOMER CONFIG-->
+    <password_defaults>
+        <lenght>25</lenght>             <!-- Number -->
+        <mayus>1</mayus>                <!-- Boolean-->
+        <digits>1</digits>              <!-- Boolean-->
+        <symbols>1</symbols>            <!-- Boolean-->
+    </password_defaults>
+
+
+    <!-- Contraseña maestra para poder recuperar todas las contraseñas almacenadas -->
+    <master_password></master_password>
+
+    <!-- PATH donde guardaremos el archivo con las passwords-->
+    <data_path>P:\PROYECTOS\REPOSITORIOS_GITHUB\API_passchest\</data_path>
+</config>
