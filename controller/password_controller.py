@@ -1,5 +1,6 @@
 import random
 import string
+from controller.config_controller import RotatingLogger
 
 
 class PasswordController:
@@ -33,12 +34,15 @@ class PasswordController:
             data.append(string.digits)
             
         if self.withSymbols():
-            data.append(string.punctuation.replace(",","").replace(".",""))
+            data.append(string.punctuation.replace(",","").replace(".","").replace("<","").replace(">",""))
             
         passw = ""
+
         for num in range(0, int(self.lenght), 1):
             type = random.choice(data)
-            passw += random.choice(type)
-        
+            caracter = random.choice(type)
+            passw += caracter
+
         self.passw = passw
+        return self.passw
 

@@ -1,13 +1,16 @@
 from contextlib import nullcontext
 from controller.config_controller import ConfigController
 from controller.password_controller import PasswordController
+from controller.encrypt_controller import Security
 
 class MasterController(object):
     def __init__(self):
         self.config =  ConfigController()
+        self.log = self.config.log
         self.default_pass_config = self.config.passwordConfig()
         self.cPassword = PasswordController(self.default_pass_config)
         self.json_file = self.config.json_file
+        self.security = Security()
 
     def generatepassword(self, lenght = nullcontext, mayus = nullcontext, digits = nullcontext, symbols = nullcontext):
         self.cPassword.lenght = lenght if lenght != nullcontext else int(self.cPassword.lenght)

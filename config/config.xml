@@ -10,10 +10,15 @@
         <symbols>1</symbols>            <!-- Boolean-->
     </password_defaults>
 
-
-    <!-- Contraseña maestra para poder recuperar todas las contraseñas almacenadas -->
-    <master_password></master_password>
-
     <!-- PATH donde guardaremos el archivo con las passwords-->
     <data_path>P:\PROYECTOS\REPOSITORIOS_GITHUB\API_passchest\</data_path>
+
+    <logs>
+        <format>%(acstime)-5s %(name)-15s %(levelname)-8s %(messages)s</format>
+        <path_logs>P:\PROYECTOS\REPOSITORIOS_GITHUB\API_passchest\logs\</path_logs>
+        <max_files_x_log>5</max_files_x_log>
+        <max_size_x_log>1</max_size_x_log> <!--MB-->
+
+        <debug_enable>1</debug_enable>  <!-- Boolean-->
+    </logs>
 </config>
